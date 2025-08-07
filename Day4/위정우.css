@@ -1,0 +1,72 @@
+body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #222;
+  }
+
+  #start-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  #start-button {
+    background-color: #ff3b3b;
+    border: none;
+    padding: 20px 60px;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255,59,59,0.7);
+    transition: background-color 0.3s ease;
+  }
+  #start-button:hover {
+    background-color: #e22b2b;
+  }
+  #warning-text {
+    margin-top: 12px;
+    font-size: 1.1em;
+    color: #a00;
+    font-weight: bold;
+  }
+
+  #blog-container {
+    max-width: 700px;
+    margin: 40px auto 80px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    user-select: none;
+    position: relative;
+  }
+
+  /* 단어를 감싸는 span */
+  .word {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.6s ease;
+    cursor: default;
+    user-select: none;
+  }
+
+  /* 단어들이 떠다니는 애니메이션 효과 */
+  .floating {
+    animation: floatMove 3s ease-in-out infinite;
+  }
+
+  @keyframes floatMove {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(3px, -4px) rotate(1deg); }
+    50% { transform: translate(-3px, 4px) rotate(-1deg); }
+    75% { transform: translate(2px, -2px) rotate(1deg); }
+  }
